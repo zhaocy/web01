@@ -6,7 +6,7 @@ Ext.define('app.controller.Main',{
     config:{
         views:['Main','Home','Guide',
             'Shops','Banks','Game',
-            'recharge.Order','Urls',
+            'recharge.Info','Urls',
             'Youhui','recharge.Active'
         ],
         refs:{
