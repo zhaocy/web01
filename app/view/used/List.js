@@ -3,16 +3,16 @@ Ext.define('app.view.used.List',{
     xtype:'usedList',
     alternateClassName:'usedList',
     config:{
-        title:'二手物品',
+        title:'商品列表',
         itemTpl: '{name}',
         navigationBar:{
             tmpItems:[{
                 xtype:'button',
                 text:'添加',
                 align:'right',
-                ui: 'decline',
-                action:'redirect',
-                redirect:'usedEdit'
+                ui: 'decline'
+//                action:'redirect'
+//                redirect:'usedEdit'
             }]
         },
         data:[{name:'wallet'},{name:'phone'}]

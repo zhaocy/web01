@@ -11,7 +11,8 @@ Ext.define('app.controller.Main',{
         ],
         refs:{
             main:'main',
-            redirectBtn:'button[action=redirect]'
+            redirectBtn:'button[action=redirect]',
+            alterBtn:'button[text=添加]'
         },
         routes:{
             'redirect/:view':'showView'
@@ -21,6 +22,32 @@ Ext.define('app.controller.Main',{
                 tap:function(t,value){
 //                    console.log(t.config)
                     this.redirectTo('redirect/'+ t.config.redirect)
+                }
+            },
+            alterBtn:{
+                tap:function(e){
+                    var me = this;
+                    var overlay = Ext.Viewport.add({
+                        xtype:'panel',
+                        left:0,
+                        top:0,
+                        modal:true,
+                        centered:true,
+                        hideOnMaskTap:true,
+                        hidden:true,
+                        width:260,
+                        height:'70%',
+                        html:'ALTER',
+                        styleHtmlContent:true,
+                        scrollable:true,
+                        items:[{
+                            docked:'top',
+                            xtype:'toolbar',
+                            title:'弹出层'
+                        }]
+                    });
+//                    overlay.showBy(Ext.getBody());
+                    overlay.showBy(me.getAlterBtn());
                 }
             }
         }

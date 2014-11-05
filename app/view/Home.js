@@ -53,7 +53,7 @@ Ext.define('app.view.Home',{
         },{
             items:[{
                 text:'客服',
-                redirect:'orders'
+                redirect:'messageInfo'
             },{
                 text:'优惠券',
                 redirect:'youhui'
