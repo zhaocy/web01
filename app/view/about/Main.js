@@ -1,0 +1,32 @@
+/**
+ *
+ */
+Ext.define('app.view.about.Main',{
+    extend:'Ext.Container',
+    xtype:'aboutmain',
+    alternateClassName:'aboutmain',
+    config:{
+        title:'关于我们',
+        layout:{
+            type:'vbox',
+            align:'stretch'
+        },
+        items:[{
+            height:100,
+            cls:'logo',
+            html:'版本号：v1.0.0'
+        },{
+            height:400,
+            layout:'fit',
+            cls:'itemlist',
+            items:{
+                xtype:'container',
+                layout:{
+                    type:'vbox',
+                    align:'stretch'
+                },
+                items:[{xtype:'aboutlist',flex:1},{xtype:'otherlist',flex:1}]
+            }
+        }]
+    }
+})

@@ -1,0 +1,35 @@
+Ext.define('app.view.user.Login',{
+    extend:'Ext.form.Panel',
+    xtype:'userLogin',
+    alternateClassName:'userLogin',
+    requires:['Ext.field.Toggle','Ext.field.Password','Ext.form.FieldSet'],
+    config:{
+        scrollable:null,
+        title:'登录',
+        margin:10,
+        items:[{
+            xtyp:'fieldset',
+            defaults:{
+              labelWidth:'40%'
+            },
+            items:[{
+                xtype:'textfield',
+                name:'username',
+                placeHolder:'输入用户名'
+            },{
+                xtype:'passwordfield',
+                name:'password',
+                placeHolder:'输入密码'
+            },{
+                xtype:'togglefield',
+                label:'记住我',
+                labelWidth:'60%'
+            }]
+        },{
+            xtype:'button',
+            action:'login',
+            text:'登录',
+            ui:'action'
+        }]
+    }
+})
